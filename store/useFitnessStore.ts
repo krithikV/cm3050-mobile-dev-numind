@@ -201,7 +201,7 @@ export function workoutStreak(workouts: Workout[]): number {
   const dates = new Set(workouts.map((w) => w.date));
   let streak = 0;
   const cursor = new Date();
-  while (true) {
+  for (;;) {
     const key = dateKey(cursor);
     if (!dates.has(key)) break;
     streak += 1;

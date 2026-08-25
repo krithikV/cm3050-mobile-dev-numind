@@ -74,7 +74,7 @@ export default function MoodScreen() {
       </Card>
 
       <View style={styles.streakRow}>
-        <Text style={[styles.streakEmoji]}>🔥</Text>
+        <Text style={styles.streakEmoji}>🔥</Text>
         <Text style={[styles.streakText, { color: colors.text }]}>
           {streak} day{streak === 1 ? '' : 's'} streak
         </Text>

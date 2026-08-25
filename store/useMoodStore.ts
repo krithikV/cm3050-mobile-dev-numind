@@ -48,7 +48,7 @@ export function getMoodStreak(entries: MoodEntry[]): number {
   const dates = new Set(entries.map((e) => e.date));
   let streak = 0;
   const cursor = new Date();
-  while (true) {
+  for (;;) {
     const key = dateKey(cursor);
     if (!dates.has(key)) break;
     streak += 1;
