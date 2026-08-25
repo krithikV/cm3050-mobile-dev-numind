@@ -101,7 +101,7 @@ export const themes = {
   dark: darkColors,
 } as const;
 
-export type ThemeMode = keyof typeof themes;
+export type ThemeMode = 'light' | 'dark';
 
 export const shadow = {
   card: {

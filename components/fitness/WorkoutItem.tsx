@@ -7,7 +7,7 @@ import { useTheme } from '../../lib/ThemeProvider';
 import { radius, spacing, fontSize, accents } from '../../lib/theme';
 import { Workout } from '../../store/useFitnessStore';
 
-const CATEGORY_ICON: Record<string, keyof typeof Ionicons.glyphMap> = {
+const CATEGORY_ICON: Record<string, string> = {
   Cardio: 'heart-outline',
   Strength: 'barbell-outline',
   Yoga: 'body-outline',

@@ -157,7 +157,7 @@ function HighlightCard({
   value,
   label,
 }: {
-  icon: keyof typeof Ionicons.glyphMap;
+  icon: string;
   color: string;
   value: string;
   label: string;

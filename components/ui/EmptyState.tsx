@@ -5,7 +5,7 @@ import { useTheme } from '../../lib/ThemeProvider';
 import { spacing, fontSize } from '../../lib/theme';
 
 type EmptyStateProps = {
-  icon: keyof typeof Ionicons.glyphMap;
+  icon: string;
   title: string;
   subtitle?: string;
   accentColor?: string;
@@ -21,7 +21,7 @@ export function EmptyState({ icon, title, subtitle, accentColor }: EmptyStatePro
           { backgroundColor: (accentColor ?? colors.tasks) + '22' },
         ]}
       >
-        <Ionicons name={icon} size={32} color={accentColor ?? colors.tasks} />
+        <Ionicons name={icon as any} size={32} color={accentColor ?? colors.tasks} />
       </View>
       <Text style={[styles.title, { color: colors.text }]}>{title}</Text>
       {subtitle && (

@@ -7,7 +7,7 @@ import { useTheme } from '../../lib/ThemeProvider';
 import { radius, spacing, fontSize } from '../../lib/theme';
 
 type ProgressRowProps = {
-  icon: keyof typeof Ionicons.glyphMap;
+  icon: string;
   color: string;
   title: string;
   subtitle: string;

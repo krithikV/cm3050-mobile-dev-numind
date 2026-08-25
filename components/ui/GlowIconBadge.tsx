@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { radius } from '../../lib/theme';
 
 type GlowIconBadgeProps = {
-  icon: keyof typeof Ionicons.glyphMap;
+  icon: string;
   color: string;
   size?: number;
 };
@@ -22,7 +22,7 @@ export function GlowIconBadge({ icon, color, size = 44 }: GlowIconBadgeProps) {
         },
       ]}
     >
-      <Ionicons name={icon} size={size * 0.5} color={color} />
+      <Ionicons name={icon as any} size={size * 0.5} color={color} />
     </View>
   );
 }

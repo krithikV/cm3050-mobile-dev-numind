@@ -17,7 +17,7 @@ type ButtonProps = Omit<PressableProps, 'style'> & {
   label: string;
   variant?: ButtonVariant;
   accentColor?: string;
-  icon?: keyof typeof Ionicons.glyphMap;
+  icon?: string;
   loading?: boolean;
   fullWidth?: boolean;
 };
@@ -70,7 +70,7 @@ export function Button({
         <ActivityIndicator color={textColor} />
       ) : (
         <>
-          {icon && <Ionicons name={icon} size={18} color={textColor} style={styles.icon} />}
+          {icon && <Ionicons name={icon as any} size={18} color={textColor} style={styles.icon} />}
           <Text style={[styles.label, { color: textColor }]}>{label}</Text>
         </>
       )}

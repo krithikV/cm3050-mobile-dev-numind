@@ -5,7 +5,7 @@ import { radius, glowShadow } from '../../lib/theme';
 import { contrastText } from '../../lib/color';
 
 type FABProps = Omit<PressableProps, 'style'> & {
-  icon?: keyof typeof Ionicons.glyphMap;
+  icon?: string;
   color: string;
 };
 
@@ -20,7 +20,7 @@ export function FAB({ icon = 'add', color, ...rest }: FABProps) {
       hitSlop={8}
       {...rest}
     >
-      <Ionicons name={icon} size={28} color={contrastText(color)} />
+      <Ionicons name={icon as any} size={28} color={contrastText(color)} />
     </Pressable>
   );
 }

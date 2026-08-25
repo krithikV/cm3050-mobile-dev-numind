@@ -7,7 +7,7 @@ import { useTheme } from '../../lib/ThemeProvider';
 import { radius, spacing, fontSize, accents } from '../../lib/theme';
 import { Meal } from '../../store/useFitnessStore';
 
-const MEAL_ICON: Record<Meal['mealType'], keyof typeof Ionicons.glyphMap> = {
+const MEAL_ICON: Record<Meal['mealType'], string> = {
   breakfast: 'sunny-outline',
   lunch: 'restaurant-outline',
   dinner: 'moon-outline',

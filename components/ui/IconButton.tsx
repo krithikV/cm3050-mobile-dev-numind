@@ -5,7 +5,7 @@ import { useTheme } from '../../lib/ThemeProvider';
 import { radius } from '../../lib/theme';
 
 type IconButtonProps = Omit<PressableProps, 'style'> & {
-  icon: keyof typeof Ionicons.glyphMap;
+  icon: string;
   size?: number;
   color?: string;
   backgroundColor?: string;
@@ -31,7 +31,7 @@ export function IconButton({
       hitSlop={8}
       {...rest}
     >
-      <Ionicons name={icon} size={size} color={color ?? colors.text} />
+      <Ionicons name={icon as any} size={size} color={color ?? colors.text} />
     </Pressable>
   );
 }

@@ -27,6 +27,7 @@ import {
   mealsForDate,
   totalCalories,
   Routine,
+  Workout,
 } from '../../store/useFitnessStore';
 import { useAlarmsStore } from '../../store/useAlarmsStore';
 import { useSettingsStore } from '../../store/useSettingsStore';
@@ -140,7 +141,7 @@ export default function HealthScreen() {
       ? startingRoutine.exercises[startingIndex]
       : null;
 
-  const handleWorkoutFormSubmit = (input: Parameters<typeof addWorkout>[0]) => {
+  const handleWorkoutFormSubmit = (input: Omit<Workout, 'id' | 'createdAt'>) => {
     addWorkout(input);
     if (startingRoutine) {
       const nextIndex = startingIndex + 1;
