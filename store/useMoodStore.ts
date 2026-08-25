@@ -6,7 +6,10 @@ import { dateKey } from '../lib/date';
 
 export type MoodEntry = {
   date: string; // yyyy-MM-dd, one entry per day
-  score: 1 | 2 | 3 | 4 | 5;
+  // Plain `number` rather than a `1 | 2 | 3 | 4 | 5` literal union — some
+  // TS transpilers (notably Expo Snack's) choke parsing numeric literal
+  // unions; the value is still always 1-5 by construction (MoodSelector).
+  score: number;
   note: string;
   updatedAt: string;
 };

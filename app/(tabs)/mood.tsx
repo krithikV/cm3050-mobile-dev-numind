@@ -24,9 +24,7 @@ export default function MoodScreen() {
   const selectedDateKey = dateKey(selectedDate);
   const selectedEntry = entries.find((e) => e.date === selectedDateKey);
 
-  const [score, setScore] = useState<1 | 2 | 3 | 4 | 5 | null>(
-    selectedEntry?.score ?? null
-  );
+  const [score, setScore] = useState<number | null>(selectedEntry?.score ?? null);
   const [note, setNote] = useState(selectedEntry?.note ?? '');
 
   // Local form state only reflects the entry at first mount — resync it

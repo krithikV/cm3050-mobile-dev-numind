@@ -3,7 +3,7 @@ import { View, Text, Pressable, StyleSheet } from 'react-native';
 import { useTheme } from '../../lib/ThemeProvider';
 import { radius, spacing, fontSize, accents } from '../../lib/theme';
 
-const MOODS: { score: 1 | 2 | 3 | 4 | 5; emoji: string; label: string }[] = [
+const MOODS: { score: number; emoji: string; label: string }[] = [
   { score: 1, emoji: '😞', label: 'Awful' },
   { score: 2, emoji: '😕', label: 'Low' },
   { score: 3, emoji: '😐', label: 'Okay' },
@@ -13,7 +13,7 @@ const MOODS: { score: 1 | 2 | 3 | 4 | 5; emoji: string; label: string }[] = [
 
 type MoodSelectorProps = {
   value: number | null;
-  onChange: (score: 1 | 2 | 3 | 4 | 5) => void;
+  onChange: (score: number) => void;
 };
 
 export function MoodSelector({ value, onChange }: MoodSelectorProps) {
